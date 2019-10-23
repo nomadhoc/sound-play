@@ -9,7 +9,7 @@ const addPresentationCore = `Add-Type -AssemblyName presentationCore;`
 const createMediaPlayer = `$player = New-Object system.windows.media.mediaplayer;`
 const loadAudioFile = path => `$player.open('${path}');`
 const playAudio = `$player.Play();`
-const stopAudio = `Start-Sleep 1; Start-Sleep -s $player.NaturalDuration.TimeSpan.Seconds;Exit;`
+const stopAudio = `Start-Sleep 1; Start-Sleep -s $player.NaturalDuration.TimeSpan.TotalSeconds;Exit;`
 
 const windowPlayCommand = path =>
   `powershell -c ${addPresentationCore} ${createMediaPlayer} ${loadAudioFile(
