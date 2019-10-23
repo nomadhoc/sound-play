@@ -7,7 +7,7 @@ _Dead simple sound player for Node -- because it should be simple._
 ```javascript
 const sound = require('sound-play')
 
-sound.play('C:\\music.mp3')
+sound.play('C:\\file.mp3')
 ```
 
 - Support `.wav`, `.mp3` and other extensions.
@@ -29,28 +29,28 @@ yarn add sound-play
 ### Absolute path
 
 ```javascript
-sound.play('C:\\music.mp3')
+sound.play('C:\\file.mp3')
 ```
 
 ### Relative path
 
 ```javascript
 const path = require('path')
-const musicPath = path.join(__dirname, 'music.mp3')
-sound.play(musicPath)
+const filePath = path.join(__dirname, 'file.mp3')
+sound.play(filePath)
 ```
 
 ### Promise
 
 ```javascript
-sound.play('C:\\music.mp3').then(response => console.log('done'))
+sound.play('C:\\file.mp3').then(response => console.log('done'))
 ```
 
 ### Async/await
 
 ```javascript
 try {
-  await sound.play('C:\\music.mp3')
+  await sound.play('C:\\file.mp3')
   console.log('done')
 } catch (error) {
   console.error(error)
