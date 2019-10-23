@@ -23,7 +23,7 @@ module.exports = {
     try {
       await execPromise(playCommand)
     } catch (err) {
-      console.error(err)
+      throw err
     }
   },
 }
