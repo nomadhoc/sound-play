@@ -1,6 +1,6 @@
 # audio-node
 🎵
-_Dead simple audio player for Node -- because audio playing should be simple._ 
+_Dead simple audio player for Node -- because it should be simple._ 
 🤘
 ```javascript
 const audio = require('audio-node')
@@ -49,3 +49,5 @@ try {
 }
 ```
 
+# License
+MIT
