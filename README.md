@@ -4,8 +4,7 @@ _Dead simple sound player for Node -- because it should be simple._
 
 ```javascript
 const sound = require('sound-play')
-
-sound.play('C:\\file.mp3')
+sound.play('file.mp3')
 ```
 
 - Support `.wav`, `.mp3` and other extensions.
