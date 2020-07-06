@@ -1,8 +1,6 @@
 # sound-play
 
-🎵
 _Dead simple sound player for Node -- because it should be simple._
-🤘
 
 ```javascript
 const sound = require('sound-play')
