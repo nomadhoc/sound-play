@@ -25,7 +25,9 @@ yarn add sound-play
 # Examples
 
 ### Relative path
-`sound.play('file.mp3')`
+```javascript
+sound.play('file.mp3')
+```
 
 or
 
