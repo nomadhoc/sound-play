@@ -9,7 +9,7 @@ sound.play('file.mp3')
 
 - Support `.wav`, `.mp3` and other extensions.
 
-- Work on `Window` and `MacOS`
+- Work on `Windows` and `MacOS`
 
 # Install
 
