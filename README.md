@@ -24,18 +24,21 @@ yarn add sound-play
 
 # Examples
 
-### Absolute path
-
-```javascript
-sound.play('C:\\file.mp3')
-```
-
 ### Relative path
+`sound.play('file.mp3')`
+
+or
 
 ```javascript
 const path = require('path')
 const filePath = path.join(__dirname, 'file.mp3')
 sound.play(filePath)
+```
+
+### Absolute path
+
+```javascript
+sound.play('C:\\file.mp3')
 ```
 
 ### Promise
