@@ -2,7 +2,7 @@ const { exec } = require('child_process')
 const execPromise = require('util').promisify(exec)
 
 /* MAC PLAY COMMAND */
-const macPlayCommand = path => `afplay ${path}`
+const macPlayCommand = path => `afplay \"${path}\"`
 
 /* WINDOW PLAY COMMANDS */
 const addPresentationCore = `Add-Type -AssemblyName presentationCore;`
