@@ -6,10 +6,10 @@ _Dead simple sound player for Node -- because it should be simple._
 const sound = require("sound-play");
 sound.play("file.mp3");
 ```
+- Native solution. Does not require third-party application to work on `Windows` and `MacOS`.
 
 - Support `.wav`, `.mp3` and other extensions.
 
-- Work on `Windows` and `MacOS`
 
 # Install
 
