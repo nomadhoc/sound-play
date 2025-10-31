@@ -1,11 +1,16 @@
 {
   "name": "sound-play",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "An sound player for NodeJS.",
-  "main": "build/main.js",
+  "main": "src/index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js"
   },
+  "types": "src/index.d.ts",
+  "files": [
+    "src/index.js",
+    "src/index.d.ts"
+  ],
   "author": "nomadhoc",
   "repository": "nomadhoc/sound-play",
   "bugs": {

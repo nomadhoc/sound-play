@@ -4,12 +4,16 @@ _Dead simple sound player for Node -- because it should be simple._
 
 ```javascript
 const sound = require("sound-play");
-sound.play("file.mp3");
+const player = sound.player("file.mp3");
+player.play();
+
+// Optional way to stop playing
+player.stop();
 ```
+
 - Native solution. Does not require third-party application to work on `Windows` and `MacOS`.
 
 - Support `.wav`, `.mp3` and other extensions.
-
 
 # Install
 
@@ -26,7 +30,7 @@ yarn add sound-play
 ### Relative path
 
 ```javascript
-sound.play("file.mp3");
+sound.player("file.mp3").play();
 ```
 
 or
@@ -34,7 +38,7 @@ or
 ```javascript
 const path = require("path");
 const filePath = path.join(__dirname, "file.mp3");
-sound.play(filePath);
+sound.player(filePath).play();
 ```
 
 ### Adjusting Volume
@@ -46,7 +50,7 @@ sound.play(filePath);
  * 1   = max volume
  */
 volume = 0.1;
-sound.play("file.mp3", volume);
+sound.player("file.mp3", volume).play();
 ```
 
 ### Adjusting Speed Rate (Mac only)
@@ -56,26 +60,36 @@ sound.play("file.mp3", volume);
  * 1 = normal | > 1 faster
  */
 rate = 1.5;
-sound.play("file.mp3", 0.5, rate);
+sound.player("file.mp3", 0.5, rate).play();
 ```
 
 ### Absolute path
 
 ```javascript
-sound.play("C:\\file.mp3");
+sound.player("C:\\file.mp3").play();
 ```
 
 ### Promise
 
 ```javascript
-sound.play("file.mp3").then((response) => console.log("done"));
+sound
+  .player("file.mp3")
+  .play()
+  .then((response) => console.log("done"));
 ```
 
 ### Async/await
 
 ```javascript
 try {
-  await sound.play("file.mp3");
+  const player = sound.player("file.mp3");
+
+  // Optional way to stop the sound playing before it was supposed to end
+  setTimeout(() => {
+    player.stop();
+  }, 5000);
+
+  await player.play();
   console.log("done");
 } catch (error) {
   console.error(error);
